@@ -1,0 +1,26 @@
+https://developer.hashicorp.com/vault/install
+
+https://releases.hashicorp.com/vault
+
+https://developer.hashicorp.com/vault/install
+
+Vault installation in dev mode in Windows:-
+==========================================
+1. Download vault binary 
+2. Go to the path where vault binary is placed
+3. Start and initialize vault in development mode by executing below command
+
+vault.exe sever -dev
+- Open new cmd and run “set VAULT_ADDR=http://127.0.0.1:8200”
+- Do ”vault status” and understand output
+- vault login
+Input the root token
+- Execute vault commands 
+ vault secrets list
+ vault auth list
+ vault policy list
+ vault policy read default 
+
+
+Vault installation in dev mode in Linux:-
+=======================================
