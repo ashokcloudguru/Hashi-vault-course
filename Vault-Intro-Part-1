@@ -1,1 +1,26 @@
+Brief explanation of each component in the Vault architecture:-
+===============================================================
+HTTP/S API: Entry point for clients to interact with Vault using secure requests.
+Barrier: Encryption layer that protects all sensitive data; must be unlocked with keys.
+Core: Central logic handling operations like initialization, sealing, and leadership.
+Token Store: Manages client tokens for authentication and authorization.
+Rollback Manager: Reverts to a previous state in case of errors or failures.
+Policy Store: Holds access policies defining what actions are allowed for users/tokens.
+Expiration Manager: Handles TTL and automatic expiration of leases (secrets, tokens, etc.).
+Audit Broker: Forwards request/response logs to the configured audit devices.
+Audit Device: Logs all interactions for compliance and monitoring (e.g., file, syslog).
+Path Routing: Routes incoming requests to the appropriate backend based on the path.
+System Backend: Provides system-level functionalities (e.g., policies, tokens, auth management).
+Secret Engine: Handles reading/writing of secrets (e.g., key/value, database, cloud creds).
+Auth Method: Authenticates users or machines (e.g., LDAP, GitHub, AppRole).
+Storage Backend: Persists Vault's encrypted data (e.g., Consul, Filesystem, S3).
 
+
+
+https://en.wikipedia.org/wiki/HashiCorp
+
+https://releases.hashicorp.com/vault/
+
+https://github.com/hashicorp/vault/blob/main/CHANGELOG-v0.md
+
+https://developer.hashicorp.com/vault/install
