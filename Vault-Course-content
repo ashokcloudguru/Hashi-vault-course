@@ -1,1 +1,105 @@
+1.Introduction to Vault :-
+========================
+What is Hashicorp vault?
+Why to use vault and what are the problems Vault solves ?
+How vault works ?
+What are the components in vault ?
+Where does vault store data ?
+What are other alternate tools to vault in market ?
+When was vault born ?
+Who is the owners ?
+Open source vs Enterprise ?
+Flavours of vault ?
+Supported OS ?
+How many ways we can communicate with vault ?
 
+2. Vault Installation:-
+=====================
+Installation , configuration, starting , initializing , unsealing vault 
+1. Vault Installation  in dev mode
+2. Vault installation in production mode
+3. Initializing vault -Different ways - GPG , PGP
+4. Unsealing vault - Different ways - Auto unseal 
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+                           ========================   {{      Vault SAP story starts            }}=====================
+                                
+                                  Acronym SAP is Not official one - It is custom creation to learn and remember
+
+
+S= Secrets engines
+A= Access/Authentication methods
+P= Policies
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+3. Secret engines:-
+====================
+1. Identity
+2. Cubbyhole
+3. KV-V1                                                            
+4. KV-V2
+5. Transit
+6. AWS
+7. Azure
+
+4. Authentication methods :-
+==========================
+Human vs Non-human auth methods
+1. Token
+2. Userpass
+3. Approle                                                             
+4.LDAP
+5.Github
+6. AWS
+8. Azure
+
+5. Policies:-
+============
+1. Root
+2. Default
+
+6. Vault tokens:-
+================
+1. Token types - service vs Batch
+2. Token Life cycle
+3. Token hierarchy
+4. TTL vs lease
+5. Periodic token
+6. uselimit
+7. Orphan
+8. Manging tokens using CLI
+9. Manging tokens using UI
+10. Manging tokens using API
+11. Root tokens
+
+7. Vault agent:-
+===============
+1. Vault agent auto-auth and token sink
+2. Vault agent Templating
+
+8. Vault replication and maintenance :-
+======================================
+Replication architecture 
+DR Replication
+Performance Replication
+Difference between DR & PR replication 
+Rekey vault
+Rotation encryption key
+Generating root token
+Generating DR operation token
+Vault snapshot generating
+Vault Initialization with GPG 
+
+
+9. Logs, Monitoring & metrics:-
+==============================
+1. System logs
+2. Audit logs
+3. Vault metrics
+
+10. Support, Price and billing:-
+==============================
+1. Support
+2. Pricing and billing
