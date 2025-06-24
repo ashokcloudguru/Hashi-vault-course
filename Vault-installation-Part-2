@@ -106,3 +106,48 @@ vault login
 
 Vault Installation with "file" storage:-
 --------------------------------------
+1. Launch the RHEL EC2 node & login
+2. Go to “ cd /tmp ” and download the vault binary file with below command
+curl -O https://releases.hashicorp.com/vault/1.19.5/vault_1.19.5_linux_amd64.zip
+3. Download the unzip package and install
+sudo yum install unzip –y
+4. Extract the vault zip file
+unzip vault_1.19.5_linux_amd64.zip
+5. Copy the vault binary file to /usr/local/bin
+cp vault /usr/local/bin
+6. Validate vault is access anywhere in system now
+7. In home directory, create a file vault.hcl and below folder
+
+mkdir –p /home/ec2-user/vault/data
+
+Vi vault.hcl
+------------
+ui              = true
+cluster_addr    = "http://44.210.87.191:8201"
+api_addr        = "http://44.210.87.191:8200"
+disable_mlock   = true
+
+storage “file" {
+   path = “/home/ec2-user/vault/data”
+}
+
+listener "tcp" {
+  address       = "0.0.0.0:8200"
+  tls_disable   = true
+}
+
+--------
+vault server -config=vault.hcl >/tmp/vault.log 2>&1 &
+
+
+📌 Breakdown:
+> redirects stdout to vault.log
+2>&1 redirects stderr to the same log file
+& runs the process in background
+
+export VAULT_ADDR=http://<public-address>:8200
+vault status
+vault operator init
+vault operator unseal 
+vault login
+
