@@ -1,3 +1,23 @@
+Part-1 - Introduction to Vault:-
+===============================
+Agenda:-
+-------
+1. What is Hashicorp vault?
+2. Why to use vault and what are the problems Vault solves ?
+3. How vault works ?
+4. What are the components in vault ?
+5. Where does vault store data ?
+6. What are other alternate tools to vault in market ?
+7. When was vault born ?
+8. Who is the owners ?
+9. Open source vs Enterprise ?
+10. Flavours of vault ?
+11. Supported OS ?
+12. How many ways we can communicate with vault ?
+
+
+
+
 Brief explanation of each component in the Vault architecture:-
 ===============================================================
 HTTP/S API: Entry point for clients to interact with Vault using secure requests.
